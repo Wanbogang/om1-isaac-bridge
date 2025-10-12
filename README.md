@@ -1,18 +1,24 @@
 # OM1 ↔ Isaac Gym Bridge (WIP)
 
-## Run mock (CPU only)
+## Run (CPU / mock)
 ```bash
 python -m demo.run_mock
 
-Structure
+Run (GPU / Isaac Gym)
 
-bridge/base_backend.py — interface backend
+Require: Python 3.10 + NVIDIA CUDA
+pip install "torch==2.3.1" --index-url https://download.pytorch.org/whl/cu121
+pip install "gym==0.25.2" numpy==1.26.4 imageio imageio-ffmpeg pillow
+pip install "git+https://github.com/NVIDIA-Omniverse/IsaacGymEnvs.git@main"
+python - << 'PY'
+import torch; print("cuda?", torch.cuda.is_available())
+PY
+python -m demo.run_isaacgym   # outputs: isaac_demo.mp4 (camera capture)
 
-bridge/mock_backend.py — mock backend (tanpa GPU)
+Notes
 
-bridge/isaac_backend.py — (WIP) Isaac Gym backend
+Modular backend: MockBackend (CPU) & IsaacGymBackend (Cartpole + camera).
 
-demo/run_mock.py — demo lokal (CPU)
+Demo (WIP/mock): https://youtu.be/Sb2CNYH0xWI
 
-demo/run_isaacgym.py — (Colab/GPU) demo video
-
+Device lokal saya non-GPU; mohon reviewer menjalankan langkah GPU di atas.
