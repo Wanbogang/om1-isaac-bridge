@@ -28,13 +28,14 @@ bridge/mock_backend.py — CPU mock backend
 
 bridge/isaac_backend.py — Isaac Gym backend (Cartpole, camera)
 
-demo/run_mock.py — local mock demo
+demo/run_mock.py — CPU demo
 
 demo/run_isaacgym.py — GPU demo (records camera frames to MP4)
 
 Demo Video (WIP / mock)
 
 https://youtu.be/Sb2CNYH0xWI
+
 Notes
 
 Local device is non-GPU; please run the GPU demo per steps above.
