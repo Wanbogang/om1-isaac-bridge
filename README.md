@@ -8,7 +8,7 @@ Structure
 
 bridge/base_backend.py — interface backend
 
-bridge/mock_backend.py — mock backend (tanpa GPU)
+bridge/mock_backend.py — mock backend (without GPU)
 
 bridge/isaac_backend.py — (WIP) Isaac Gym backend
 
